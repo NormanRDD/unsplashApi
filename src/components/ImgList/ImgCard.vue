@@ -1,10 +1,13 @@
 <template>
-  <div class="imgCard">
-    <img :src="image.urls.small_s3" alt="" />
+  <div v-if="image" class="imgCard">
+    <img :src="image" alt="" />
   </div>
 </template>
 <script setup lang="ts">
 import { defineProps, reactive } from "vue";
+const props = defineProps({
+  image: String,
+});
 </script>
 <style lang="scss" scoped>
 .imgCard {

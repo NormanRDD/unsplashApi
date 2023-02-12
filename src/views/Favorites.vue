@@ -4,7 +4,7 @@
       <h2 class="favs__header">Избранное</h2>
       <div class="favs__imgs">
         <div v-for="img in favorites" :key="img"></div>
-        <ImgCard :image="img" />
+        <ImgCard :image="img.urls.regular" />
       </div>
     </div>
   </div>

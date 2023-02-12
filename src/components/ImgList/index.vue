@@ -3,7 +3,7 @@
     <div class="imgList__container">
       <div v-for="img in imgs" :key="img" class="ImgCard__wrapper">
         <router-link :to="`/${img.id}`">
-          <ImgCard :image="img.urls.small_s3" />
+          <ImgCard :image="img.urls.regular" />
         </router-link>
       </div>
     </div>
