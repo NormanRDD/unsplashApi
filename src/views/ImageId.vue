@@ -10,13 +10,18 @@
           </div>
         </div>
         <div class="currentImg__btns">
-          <div class="currentImg__heart" :class="{ isActive: add }">
+          <div
+            style="cursor: pointer"
+            @click="addSwitch"
+            class="currentImg__heart"
+            :class="{ isActive: add }"
+          >
             <!-- <img
              
               src="@/assets/icons/current/heart.svg"
               alt=""
             /> -->
-            <heartSvg @click="addSwitch" />
+            <heartSvg />
           </div>
           <div class="currentImg__download">
             <img src="@/assets/icons/current/download.svg" alt="" />
