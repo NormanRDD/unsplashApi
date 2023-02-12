@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "noImplicitAny": false,
     "target": "es5",
     "module": "esnext",
     "strict": true,
@@ -7,10 +8,10 @@
     "importHelpers": true,
     "moduleResolution": "node",
     "skipLibCheck": true,
+    "noEmit": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
-    "allowJs" : true,
     "baseUrl": ".",
     "types": [
       "webpack-env"
@@ -31,9 +32,7 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "tests/**/*.ts",
-    "tests/**/*.tsx"
-, "src/api/api.js"  ],
+    "src/api/api.js"  ],
   "exclude": [
     "node_modules"
   ]

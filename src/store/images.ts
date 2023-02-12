@@ -1,16 +1,36 @@
 import { defineStore } from "pinia";
-import {api} from "@/api/api";
+import api from "@/api/api";
 
-export const useCounterStore = defineStore("main", {
+// interface MyObject {
+//   img: {};
+// }
+interface MyFavs {
+  img: string;
+}
+// const arr: Array<MyObject> = [];
+
+export const useImgStore = defineStore("main", {
   state: () => ({
     imgs: [],
+    img: {},
+    favorites: [] as MyFavs[],
   }),
-  //   getters: {
-  //     doubleCount: (state) => {
-  //       return state.counter * 2;
-  //     },
-  //   },
   actions: {
+    addToFavs(image) {
+      this.favorites.push(image.urls.regular);
+      // this.favorites.push(this.img);
+    },
+    getByIdAction(id) {
+      api
+        .getById(id)
+        .then((res) => {
+          console.log(res);
+          this.img = res;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    },
     getRandomAction() {
       api
         .getRandom()

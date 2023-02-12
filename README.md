@@ -1,4 +1,4 @@
-# compition
+# ArtGallery
 
 ## Project setup
 ```
